@@ -1,7 +1,7 @@
 const reposEl = document.querySelector('.github-cards');
 
 function fetchRepos() {
-    fetch("https://gh-pinned-repos-5l2i19um3.vercel.app/?username=Maksiooo").then(response => {
+    fetch("https://gh-pinned-repos-5l2i19um3.vercel.app/?username=kokosnotfound").then(response => {
         if (!response.ok) {
             throw Error("Error while loading repositories");
         }
