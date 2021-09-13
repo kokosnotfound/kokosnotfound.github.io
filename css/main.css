@@ -1,71 +1,38 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Style+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&display=swap");
 body {
-  background-color: black;
-  color: white;
+  background: #0f1923;
+}
+
+.center {
+  text-align: center;
 }
 
 h1 {
-  font-family: 'Roboto Mono', monospace;
+  font-family: 'Press Start 2P', cursive;
+  color: white;
 }
 
 p {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto Mono', monospace;
+  color: white;
+  font-size: 17px;
 }
 
-.github-cards {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row;
-          flex-flow: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  width: 60%;
-  margin: auto;
-  width: 50%;
+.gold {
+  color: #e9a106;
 }
 
-.github-card {
-  display: block;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  margin: 10px;
-  padding: 20px;
-  color: #555;
-  text-decoration: none;
-  font-size: 13px;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  min-width: 250px;
+.pink {
+  color: #d349d8;
 }
 
-.github-card > h3 {
-  margin-top: 0;
-  color: #4078c0;
-  font-size: 15px;
+.blue {
+  color: deepskyblue;
 }
 
-.github-card__meta {
-  margin-right: 20px;
-}
-
-.github-card__meta > i {
-  font-size: 16px;
-}
-
-.title {
-  font-size: 50px;
-  color: #4078c0;
-}
-
-.h4 {
-  font-size: 34px;
-  color: #4078c0;
-  font-family: 'Style Script', cursive;
+.link {
+  color: #0099ff;
 }
 /*# sourceMappingURL=main.css.map */
