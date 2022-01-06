@@ -1,1 +1,1 @@
-https://kokosnotfound.github.io/portfolio/
+https://kokosnotfound.github.io/
