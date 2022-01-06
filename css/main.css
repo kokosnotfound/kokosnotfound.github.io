@@ -38,5 +38,6 @@ p {
 
 .avatar {
   border-radius: 50%;
+  vertical-align: middle;
 }
 /*# sourceMappingURL=main.css.map */
