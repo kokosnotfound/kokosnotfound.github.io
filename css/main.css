@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
 body {
   background: #0f1923;
 }
@@ -39,5 +40,23 @@ p {
 .avatar {
   border-radius: 50%;
   vertical-align: middle;
+}
+
+.loading {
+  margin: 0;
+  display: inline;
+  font-family: 'Roboto Mono', monospace;
+  color: white;
+  font-size: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%)
+}
+
+.typed-cursor {
+  font-size: 30px;
+  color: white;
 }
 /*# sourceMappingURL=main.css.map */
