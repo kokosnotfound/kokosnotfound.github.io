@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200;400;700&display=swap');
+
+body {
+    background-image: url('../img/bg.jpeg');
+    background-repeat: no-repeat;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+h1 {
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 200;
+    color: white;
+}
+
+p {
+    color: white;
+}
+
+a + a {
+    margin-left: 50px;
+}
+
+.icons {
+    color: white;
+    font-size: 30px;
+}
+
+i:hover {
+    scale: 1.5;
+    transition: 0.4s;
+}
