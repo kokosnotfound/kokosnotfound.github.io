@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chemistry Label Generator</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" integrity="sha512-qZvrmS2ekKPF2mSznTQsxqPgnpkI4DNTlrdUmTzrDgektczlKNRRhy5X5AAOnx5S09ydFYWWNSfcEqDTTHgtNA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+    <form id="substance-form">
+        <label for="substance-name">Substance:</label><br>
+        <input type="text" id="substance-name" name="substance-name" required><br><br>
+        
+        <label for="substance-formula">Chemical formula:</label><br>
+        <input type="text" id="substance-formula" name="substance-formula">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;info: Use '_' to make a subscript for the sign<br><br>
+
+        <label for="substance-mass">Substance mass:</label><br>
+        <input type="number" id="substance-mass" name="substance-mass" required>
+        <select id="weight-unit" name="weight-unit" required>
+            <option value="g">g</option>
+            <option value="mg">mg</option>
+            <option value="kg">kg</option>
+            <option value="lb">lb</option>
+            <option value="oz">oz</option>
+            <option value="mcg">µg</option>
+        </select>
+        <br><br>
+
+        <label for="expiration-date">Expiration date:</label><br>
+        <input type="date" name="date" id="date">
+        <br><br>
+
+        <label for="we-num">WE/EC number:</label><br>
+        <input type="text" id="we-num" name="we-num" maxlength="9" oninput="formatWENumber(this)"><br><br>
+        <label for="cas-num">CAS number:</label><br>
+        <input type="text" id="cas-num" name="cas-num" maxlength="9" oninput="formatCASNumber(this)"><br><br>
+
+        <label for="molar-mass">Molar mass:</label><br>
+        <input type="number" id="molar-mass" name="molar-mass"> g/mol<br><br>
+
+        <h3>GHS Pictograms</h5>
+        <label>
+            <input type="checkbox" name="pictograms" data-option="gases" value="Gases stored under pressure">
+            <img src="./img/compressed_gas.png" width="50px" height="50px">
+        </label>
+
+        <label>
+            <input type="checkbox" name="pictograms" data-option="corrosive" value="Materials causing skin corrosion/burns or eye damage on contact, or that are corrosive to metals">
+            <img src="./img/corrosive.png" width="50px" height="50px">
+        </label>
+
+        <label>
+            <input type="checkbox" name="pictograms" data-option="harmful" value="An immediate skin, eye or respiratory tract irritant, or narcotic">
+            <img src="./img/harmful.png" width="50px" height="50px">
+        </label>
+
+        <label>
+            <input type="checkbox" name="pictograms" data-option="explosive" value="Explosives, including organic peroxides and highly unstable material at risk of exploding even without exposure to air">
+            <img src="./img/explosive.png" width="50px" height="50px">
+        </label>
+
+        <label>
+            <input type="checkbox" name="pictograms" data-option="flammable" value="Flammable materials or substances liable to self ignite when exposed to water or air, or which emit flammable gas">
+            <img src="./img/flammable.png" width="50px" height="50px">
+        </label>
+
+        <label>
+            <input type="checkbox" name="pictograms" data-option="healthhazard" value="A cancer-causing agent or substance with respiratory, reproductive or organ toxicity that causes damage over time (a chronic, or long-term, health hazard)">
+            <img src="./img/health_hazard.png" width="50px" height="50px">
+        </label>
+
+        <label>
+            <input type="checkbox" name="pictograms" data-option="oxidizing" value="Chemicals that facilitate burning or make fires burn hotter and longer">
+            <img src="./img/oxidizing.png" width="50px" height="50px">
+        </label>
+
+        <label>
+            <input type="checkbox" name="pictograms" data-option="environmentalhazard" value="Chemicals toxic to aquatic wildlife. (Non-Mandatory)">
+            <img src="./img/environmental_hazard.png" width="50px" height="50px">
+        </label>
+
+        <label>
+            <input type="checkbox" name="pictograms" data-option="toxic" value="Substances, such as poisons and highly concentrated acids, which have an immediate and severe toxic effect">
+            <img src="./img/toxic.png" width="50px" height="50px">
+        </label>
+        <br><br>
+
+        <label for="description">Description:</label><br>
+        <textarea id="description" name="description" rows="4" cols="50" maxlength="240"></textarea>
+        <br>max 240 characters
+        <br><br>
+
+        <label for="warning-message">Warning message</label><br>
+        <textarea id="warning-message" name="warning-message" rows="4" cols="50" maxlength="820"></textarea>
+        <br>max 820 characters
+
+        <br><br>
+        <button type="button" id="generate-pdf">Generate PDF</button>
+    </form>
+
+    <script src="./js/main.js"></script>
+    <p style="text-align: center;">Created by kokos</p>
+</body>
+</html>
